@@ -16,6 +16,7 @@ def consultar():
     try:
         con = conectar(); cur = con.cursor()
         cur.execute("SELECT id_asistencia, id_alumno, fecha, estado FROM asistencias")
+
         filas = cur.fetchall(); cur.close(); con.close()
         lista.delete(0, tk.END)
         for f in filas: lista.insert(tk.END, f"{f[0]} | {f[1]} | {f[2]} | {f[3]}")
@@ -24,6 +25,8 @@ def consultar():
 def actualizar():
     try:
         con = conectar(); cur = con.cursor()
+
+        
         cur.execute("UPDATE asistencias SET id_alumno=%s, fecha=%s, estado=%s WHERE id_asistencia=%s", (id_alumno.get(), fecha.get(), estado.get(), id_asistencia.get()))
         con.commit(); cur.close(); con.close()
         messagebox.showinfo("ASISTENCIAS", "Actualizado"); consultar(); limpiar()
