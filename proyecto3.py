@@ -3,27 +3,11 @@ from tkinter import ttk, messagebox, filedialog
 from datetime import datetime
 import mysql.connector
 
-''' base de datos
-CREATE DATABASE IF NOT EXISTS escuela_nezahualcoyotl;
-USE escuela_nezahualcoyotl;
-
-CREATE TABLE alumnos (id VARCHAR(20) PRIMARY KEY, nombre VARCHAR(100) NOT NULL, grupo VARCHAR(10) NOT NULL);
-CREATE TABLE docentes (id VARCHAR(20) PRIMARY KEY, nombre VARCHAR(100) NOT NULL, materia VARCHAR(50) NOT NULL, correo VARCHAR(100));
-CREATE TABLE asistencias (fecha DATE NOT NULL, matricula VARCHAR(20) NOT NULL, estado VARCHAR(20) NOT NULL, PRIMARY KEY (fecha, matricula));
-CREATE TABLE incidencias (id INT AUTO_INCREMENT PRIMARY KEY, fecha DATE NOT NULL, matricula VARCHAR(20), alumno VARCHAR(150), tipo VARCHAR(50), descripcion TEXT);
-CREATE TABLE justificantes (id INT AUTO_INCREMENT PRIMARY KEY, matricula VARCHAR(20), fecha DATE, motivo TEXT);
-CREATE TABLE  reportes (id INT AUTO_INCREMENT PRIMARY KEY, fecha DATE, titulo VARCHAR(150), responsable VARCHAR(50), contenido TEXT);
-CREATE TABLE cartas (id INT AUTO_INCREMENT PRIMARY KEY, fecha DATE, alumno VARCHAR(100), tutor VARCHAR(100), grupo VARCHAR(10), motivo TEXT, texto TEXT);
-
-INSERT INTO alumnos VALUES ('240101','Sofia Hernandez Ruiz','5° B'),('240102','Diego Castillo Lopez','5° B'),('240103','Valeria Mendoza Perez','5° B'),('240104','Emiliano Torres Garcia','5° B'),('240105','Renata Juarez Martinez','5° B');
-INSERT INTO docentes VALUES ('D001','Laura Martinez','Español','laura@nezahualcoyotl.edu.mx'),('D002','Carlos Gomez','Matematicas','carlos@nezahualcoyotl.edu.mx');'''
-'''
-
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "root",
-    "database": "escuela_nezahualcoyotl"
+    "password": "",
+    "database": "escuela_nezahualcoyotl1"
 }
 
 def conectar():
