@@ -16,13 +16,13 @@ CREATE TABLE  reportes (id INT AUTO_INCREMENT PRIMARY KEY, fecha DATE, titulo VA
 CREATE TABLE cartas (id INT AUTO_INCREMENT PRIMARY KEY, fecha DATE, alumno VARCHAR(100), tutor VARCHAR(100), grupo VARCHAR(10), motivo TEXT, texto TEXT);
 
 INSERT INTO alumnos VALUES ('240101','Sofia Hernandez Ruiz','5° B'),('240102','Diego Castillo Lopez','5° B'),('240103','Valeria Mendoza Perez','5° B'),('240104','Emiliano Torres Garcia','5° B'),('240105','Renata Juarez Martinez','5° B');
-INSERT INTO docentes VALUES ('D001','Laura Martinez','Español','laura@nezahualcoyotl.edu.mx'),('D002','Carlos Gomez','Matematicas','carlos@nezahualcoyotl.edu.mx');'''
+INSERT INTO docentes VALUES ('D001','Laura Martinez','Español','laura@nezahualcoyotl.edu.mx'),('D002','Carlos Gomez','Matematicas','carlos@nezahualcoyotl.edu.mx');
 '''
 
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "root",
+    "password": "",
     "database": "escuela_nezahualcoyotl"
 }
 
